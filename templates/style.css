@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Definição de Variáveis e Estilos Globais */
+:root{
+    /*Cores*/
+    --cor-primaria: #121212;
+    --cor-secundaria: #1DB954;
+    --cor-amarela: #F1C40F;
+    --cor-branca: #f5f5f5;
+    --cor-cinza: #b3b3b3;
+    --cor-cinza-escuro: #1e1e1e;
+    --cor-borda: #2a2a2a;
+
+    /*Fontes*/
+    --fonte-principal: 'Roboto', sans-serif;
+}
+
+/* Reset Básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+body{
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- ESTILOS DOS BOTÕES --- */
+.botao-principal {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-principal:hover {
+    background-color: #1ed760;
+}
+
+.botao-secundario {
+    display: inline-block;
+    border: 2px solid var(--cor-secundaria);
+    color: var(--cor-secundaria);
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botao-secundario:hover {
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+}
+
+
+/* --- CABEÇALHO --- */
+.cabecalho { 
+    padding: 20px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.cabecalho .container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.menu ul { 
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a { 
+    color: var(--cor-cinza);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover { 
+    color: var(--cor-branca);
+}
+
+.secao-principal { 
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 100px 20px; 
+    text-align: center;
+    
+    background-image: url('../img/Imagem 1.png');
+    
+    background-size: cover;
+    background-position: center;
+}
+
+.secao-principal::before { 
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+.secao-principal .container { 
+    position: relative;
+    z-index: 2;
+}
+
+.secao-principal h1 { 
+    font-size: 3.8rem;
+    margin-bottom: 5px;
+    color: var(--cor-branca);
+    font-weight: 700;
+}
+
+.secao-principal h2 { 
+    font-size: 1.5rem;
+    color: var(--cor-cinza);
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+/* --- NOVA SEÇÃO RESUMO --- */
+.secao-resumo {
+    background-color: #000000;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.secao-resumo h3 {
+    font-size: 1.4rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-weight: 500;
+    color: var(--cor-branca);
+}
+
+.principais-caracteristicas { 
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    font-size: 1.2em;
+    color: var(--cor-branca);
+}
+
+/* --- ESTILO PARA OS BOTÕES DE VÍDEO --- */
+
+.chamada-para-acao {
+    margin-top: 50px; 
+}
+
+.texto-chamada {
+    color: var(--cor-branca);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.caixa-botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.botao-video, .botao-reportagem {
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--cor-branca);
+}
+
+.botao-video {
+    background-color: var(--cor-branca);
+    color: #000000;
+}
+
+.botao-reportagem {
+    background-color: transparent;
+    color: var(--cor-branca);
+}
+
+.botao-video:hover {
+    transform: scale(1.05); 
+    background-color: #e0e0e0;
+}
+
+.botao-reportagem:hover {
+    background-color: var(--cor-branca);
+    color: #000000;
+}
+
+
+/* --- SEÇÃO DRONE SHOWCASE (FUNDO PRETO) --- */
+.secao-drone {
+    padding: 0;
+    margin: 0;
+}
+
+.imagem-fundo-drone {
+    width: 100%;
+    min-height: 80vh;
+    background-image: url('../img/Imagem 2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- FEATURES GRID --- */
+.grade-de-funcoes {
+    padding: 60px 0;
+}
+
+.grade-de-funcoes .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.item-da-funcao {
+    background-color: var(--cor-cinza-escuro);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 3px solid var(--cor-secundaria);
+}
+
+.item-da-funcao h4 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.item-da-funcao p {
+    color: var(--cor-cinza);
+}
+
+/* --- SEÇÃO DEPOIMENTOS --- */
+.secao-depoimentos {
+    position: relative;
+    padding: 80px 0;
+    text-align: center;
+    background-image: url('../img/Imagem 3.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.secao-depoimentos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.secao-depoimentos .container {
+    position: relative;
+    z-index: 2;
+}
+
+.secao-depoimentos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--cor-branca);
+}
+
+.conteudo-depoimento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.texto-depoimento {
+    flex-basis: 350px;
+    text-align: left;
+}
+
+.texto-depoimento blockquote {
+    font-size: 1.2em;
+    font-style: italic;
+    border-left: 3px solid var(--cor-secundaria);
+    padding-left: 20px;
+    margin-bottom: 15px;
+    color: var(--cor-branca);
+}
+
+.texto-depoimento cite {
+    font-weight: 600;
+    color: var(--cor-cinza);
+}
+
+.pessoa-depoimento img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor-borda);
+}
+
+.estatisticas-depoimento {
+    flex-basis: 250px;
+}
+
+.estrelas {
+    font-size: 2.5em;
+    color: var(--cor-amarela);
+    margin-bottom: 15px;
+}
+
+.estatisticas-depoimento p {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--cor-branca);
+}
+
+/* --- SEÇÃO CONTATO (FUNDO PRETO) --- */
+.secao-contato {
+    padding: 80px 0;
+}
+
+.secao-contato .container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.informacoes-contato {
+    flex: 1;
+    min-width: 300px;
+}
+
+.informacoes-contato h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.informacoes-contato p, .informacoes-contato ul li {
+    color: var(--cor-cinza);
+    font-size: 1.1em;
+}
+
+.informacoes-contato ul {
+    list-style: none;
+    margin: 20px 0 30px 0;
+}
+
+.informacoes-contato ul li {
+    margin-bottom: 10px;
+    color: var(--cor-branca);
+}
+
+.detalhes-contato p {
+    font-size: 1em;
+    color: var(--cor-cinza);
+}
+
+.formulario-contato {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--cor-cinza-escuro);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.formulario-contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario-contato input {
+    background-color: var(--cor-borda);
+    border: 1px solid #444;
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--cor-branca);
+    font-size: 1rem;
+}
+
+.formulario-contato input::placeholder {
+    color: var(--cor-cinza);
+}
+
+/* --- RODAPÉ --- */
+.rodape {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid var(--cor-borda);
+    color: var(--cor-cinza);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+    .conteudo-depoimento {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Regra para esconder o menu em telas pequenas */
+    .menu {
+        display: none;
+    }
+
+    .secao-contato .container {
+        flex-direction: column;
+    }
+    .secao-principal h1 {
+        font-size: 2.5rem;
+    }
+    .secao-principal h2, .secao-principal h3 {
+        font-size: 1.2rem;
+    }
+}
